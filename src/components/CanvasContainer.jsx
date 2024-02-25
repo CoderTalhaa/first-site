@@ -1,8 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import { Environment, Lightformer, PerspectiveCamera,  } from "@react-three/drei";
+import { Environment,  } from "@react-three/drei";
 import Laptop from "./Laptop";
-import React,{ useRef, useState } from "react";
-import { useSpring } from "react-spring/three";
+import { Suspense } from "react";
 
 
 
@@ -14,8 +13,9 @@ const CanvasContainer = () => {
      
       <Environment preset="city" />
       <color args={['#15151a']} attach="background" />
- 
+      <Suspense fallback={null}>
       <Laptop  />
+      </Suspense>
     </Canvas>
   );
 };

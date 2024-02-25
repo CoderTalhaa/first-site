@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import {
   ContactShadows,
   Float,
@@ -6,17 +7,11 @@ import {
   Text,
   useGLTF,
 } from "@react-three/drei";
-import { useState } from "react";
 
 const Laptop = () => {
   const model = useGLTF(
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
   );
-
-    const [hovered, setHovered] = useState(false)
-    
-
-
 
   return (
     <>
@@ -49,7 +44,7 @@ const Laptop = () => {
               position={[0, 1.56, -1.4]}
               rotation={[-0.256, 0, 0]}
             >
-              <iframe src="https://talha-hub.netlify.app/" />
+              <iframe src="https://talha-portfolio-three.vercel.app/" />
             </Html>
           </primitive>
 
